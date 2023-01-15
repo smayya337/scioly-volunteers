@@ -9,7 +9,7 @@ def login(request):
     return HttpResponse("Success!")
 
 
-def signup(request):
+def register(request):
     return HttpResponse("Welcome!")
 
 

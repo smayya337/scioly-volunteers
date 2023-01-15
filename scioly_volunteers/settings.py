@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     "scioly_volunteers.profile",
     "scioly_volunteers.userpage",
     "scioly_volunteers.volunteers",
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -127,6 +129,9 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "authentication.User"
+
+LOGIN_REDIRECT_URL = "/home"
+LOGIN_URL = "/login"
 
 try:
     from scioly_volunteers.secret import *

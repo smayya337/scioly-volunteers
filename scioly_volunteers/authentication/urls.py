@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.contrib.auth import views as auth_views
 from django.urls import path
 from scioly_volunteers.authentication import views, new_views
 
@@ -20,7 +21,11 @@ app_name = "authentication"
 
 urlpatterns = [
     path("", new_views.IndexView.as_view(), name="index"),
-    path("login", views.login, name="login"),
-    path("signup", views.signup, name="signup"),
-    path("logout", views.logout, name="logout"),
+    path(
+        "login",
+        auth_views.LoginView.as_view(template_name="authentication/login.html"),
+        name="login",
+    ),
+    path("register", new_views.register_view, name="register"),
+    path("logout", new_views.logout_view, name="logout"),
 ]
