@@ -2,3 +2,4 @@ scioly_volunteers/secret.py
 *.sqlite3
 .idea/
 .vscode/
+**/__pycache__/
