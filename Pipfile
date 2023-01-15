@@ -1,0 +1,36 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+crispy-bootstrap5 = "*"
+django = "*"
+django-bootstrap-pagination = "*"
+django-crispy-forms = "*"
+django-extensions = "*"
+gunicorn = "*"
+ipython = "*"
+mistune = "*"
+psycopg2 = "*"
+pygments = "*"
+social-auth-app-django = "*"
+whitenoise = "*"
+
+[dev-packages]
+autopep8 = "*"
+black = "*"
+coverage = "*"
+django-stubs = "*"
+flake8 = "*"
+isort = "*"
+mypy = "*"
+pylint = "*"
+pylint-django = "*"
+pyyaml = "*"
+typed-ast = "*"
+types-Markdown = "*"
+types-bleach = "*"
+
+[requires]
+python_version = "3.11"

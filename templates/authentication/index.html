@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Welcome to the Science Olympiad Volunteer Directory!</h2>
+
+    <p>
+        This website is intended to connect Science Olympiad tournaments with volunteers based on event expertise and location.
+    </p>
+
+    {% if request.user.is_authenticated %}
+        <p>You may add personal information by navigating to your profile.</p>
+        <p>You may browse volunteers using the links above.</p>
+    {% else %}
+        <p>You must sign in to see volunteer information.</p>
+    {% endif %}
+{% endblock %}
